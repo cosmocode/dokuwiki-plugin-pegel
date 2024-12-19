@@ -1,0 +1,7 @@
+base   pegel
+author Andreas Gohr
+email  dokuwiki@cosmocode.de
+date   2024-12-19
+name   pegel plugin
+desc   Display current water levels as reported by pegelonline
+url    https://www.dokuwiki.org/plugin:pegel
