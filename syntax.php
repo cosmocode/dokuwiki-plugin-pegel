@@ -73,13 +73,13 @@ class syntax_plugin_pegel extends SyntaxPlugin
                     $text = $current['currentMeasurement']['value'] . $current['unit'];
                     break;
                 case 'dt':
-                    $text = (new DateTime($current['currentMeasurement']['timestamp']))->format('Y-m-d H:i:s');
+                    $text = (new DateTime($current['currentMeasurement']['timestamp']))->format($this->getConf('dt'));
                     break;
                 case 't':
-                    $text = (new DateTime($current['currentMeasurement']['timestamp']))->format('H:i:s');
+                    $text = (new DateTime($current['currentMeasurement']['timestamp']))->format($this->getConf('t'));
                     break;
                 case 'd':
-                    $text = (new DateTime($current['currentMeasurement']['timestamp']))->format('Y-m-d');
+                    $text = (new DateTime($current['currentMeasurement']['timestamp']))->format($this->getConf('d'));
                     break;
                 default:
                     $text = $station[$data['type']] ?? 'unknown type';
